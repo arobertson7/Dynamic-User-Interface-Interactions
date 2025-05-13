@@ -22,7 +22,7 @@ const dropDown = (function() {
             timer += 50;
         }
         // change button svg
-        button.childNodes[0].src = buttonIconOpen;
+        button.querySelector('img').src = buttonIconOpen;
     }
 
     const closeMenu = function(button, content, buttonIconClosed) {
@@ -38,7 +38,7 @@ const dropDown = (function() {
         timer += 50;
         setTimeout(() => {
             content.style.visibility = "hidden";
-            button.childNodes[0].src = buttonIconClosed;
+            button.querySelector('img').src = buttonIconClosed;
         }, timer);
     }
 
